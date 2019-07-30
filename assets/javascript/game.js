@@ -8,13 +8,21 @@ var win;
 
 //A game with 4 crystals photos as buttions
 //Every crystal needs a random number between 1-12
-for(var i = 0; i < 4; i++) {
+for (var i = 0; i < 4; i++) {
+
+  var random = Math.floor(Math.random() * 12)
+  console.log(random);
+
   var crystal = $("<div>");
-  crystal.attr=("class",'crystal');
+  
+      crystal.attr ({
+        "class":'crystal',
+        "data-random": random
+      });
 
+  
   $(".crystals").append(crystal);
-}
-
+    }
 //New Random number generates everytime we Win or Lose
 
 //when clicking crystal it should add numbers up 
