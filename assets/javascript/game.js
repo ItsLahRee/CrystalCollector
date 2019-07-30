@@ -6,6 +6,11 @@ var lost;
 var win;
 
 
+//Random Number Generator
+random_result = Math.floor(Math.random() * 69 + 30);  //hoisting
+
+$("#result").html('Random Result: '+ random_result);
+
 //A game with 4 crystals photos as buttions
 //Every crystal needs a random number between 1-12
 for (var i = 0; i < 4; i++) {
