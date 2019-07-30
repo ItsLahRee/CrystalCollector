@@ -8,6 +8,12 @@ var win;
 
 //A game with 4 crystals photos as buttions
 //Every crystal needs a random number between 1-12
+for(var i = 0; i < 4; i++) {
+  var crystal = $("<div>");
+  crystal.attr=("class",'crystal');
+
+  $(".crystals").append(crystal);
+}
 
 //New Random number generates everytime we Win or Lose
 
