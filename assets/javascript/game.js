@@ -2,12 +2,14 @@
 
 //global variables
 var randomNumber;
-var lost;
-var win;
+var lost = 0;
+var win = 0;
 var previous = 0;
 
+var resetAndStart = function() {
 
-//Random Number Generator
+  $(".crystals").empty();
+
 random_result = Math.floor(Math.random() * 69 + 30);  //hoisting
 
 //New Random number generates everytime we Win or Lose
@@ -26,13 +28,20 @@ for (var i = 0; i < 4; i++) {
         "class":'crystal',
         "data-random": random
       });
-  
+
+    crystal.html(random);
+
   $(".crystals").append(crystal);
     }
+  };
+
+  resetAndStart();
 
 //when clicking crystal it should add numbers up 
 //untill it meets or exceeds target number
-$(".crystal").on('click', function () {
+
+//Event delegation
+$(document).on('click', ".crystal", function () {
   
   var num= parseInt($(this).attr('data-random'));
 
@@ -42,10 +51,16 @@ $(".crystal").on('click', function () {
   
 //conditional logic
   if(previous > random_result) {
-  console.log("You lost.");
+    lost--;
+    $("#lost").html(lost);
+    previous=0;
+    resetAndStart();
   }
   else if(previous === random_result){
-    console.log("You win!!")
+    win++;
+    $("#win").html(win);
+    previous=0;
+    resetAndStart();
   }
  
 });
