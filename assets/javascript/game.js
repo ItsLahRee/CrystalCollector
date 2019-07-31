@@ -4,6 +4,7 @@
 var randomNumber;
 var lost;
 var win;
+var previous = 0;
 
 
 //Random Number Generator
@@ -32,9 +33,21 @@ for (var i = 0; i < 4; i++) {
 //when clicking crystal it should add numbers up 
 //untill it meets or exceeds target number
 $(".crystal").on('click', function () {
+  
+  var num= parseInt($(this).attr('data-random'));
 
-  console.log($(this).attr('data-random'));
-   
+  var result = num + 5;
+  previous += num;
+  console.log(previous);
+  
+//conditional logic
+  if(previous > random_result) {
+  console.log("You lost.");
+  }
+  else if(previous === random_result){
+    console.log("You win!!")
+  }
+ 
 });
 
 //If the total is = to target#, then increment win counter
