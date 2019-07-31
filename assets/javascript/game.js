@@ -47,6 +47,8 @@ $(document).on('click', ".crystal", function () {
 
   var result = num + 5;
   previous += num;
+
+  $("#previous").html(previous);
   console.log(previous);
   
 //conditional logic
@@ -54,12 +56,14 @@ $(document).on('click', ".crystal", function () {
     lost--;
     $("#lost").html(lost);
     previous=0;
+    $("#previous").html(previous);
     resetAndStart();
   }
   else if(previous === random_result){
     win++;
     $("#win").html(win);
     previous=0;
+    $("#previous").html(previous);
     resetAndStart();
   }
  
