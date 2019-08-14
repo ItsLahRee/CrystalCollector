@@ -1,3 +1,22 @@
+.title {
+  text-align: center;
+  color: aquamarine;
+  background-color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+#body {
+  background-image: image();
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 150%;
+
+}
+
 .crystals {
  display: flex;
  justify-content: space-between;
@@ -8,6 +27,7 @@
 border: 1px solid green;
 height: 200px;
 width: 200px;
+background-image: image("bismouth1.jpeg");
 }
 
 
