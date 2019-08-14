@@ -1,15 +1,23 @@
 # Crystal Collector
-Web based game featuring dynamic HTML updates using the JQuery library. 
 
-# Instillation
+In this assignment, we were required to create a fun and interactive game for web browsers. This time, the app must dynamically update the HTML with the jQuery library.
 
-Realative link:
+# Instructions
 
-https://github.com/ItsLahRee/CrystalCollector
+You will be given a random number at the start of the game. There are four crystals on the page. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. The value of each crystal is hidden from you until you click on it.
+
+Deployed Link: 
+
+https://itslahree.github.io/CrystalCollector/
 
 ## Technologies Used
 
-HTML5, CSS3, JavaScript, JQuery
+Built With
+HTML5
+CSS3
+Twitter-Bootstrap - Framework
+JavaScript
+jQuery - JavaScript Library
 
 ## Contributing
 
@@ -17,4 +25,5 @@ If you have something interesting to contribute, send me a pull request!
 
 ## Liscence
 
-@ItsLahRee 2019
+ItsLahRee | 2019
+
