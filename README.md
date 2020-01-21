@@ -6,24 +6,15 @@ In this assignment, we were required to create a fun and interactive game for we
 
 You will be given a random number at the start of the game. There are four crystals on the page. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. The value of each crystal is hidden from you until you click on it.
 
-Deployed Link: 
+## Built With
 
-https://itslahree.github.io/CrystalCollector/
-
-## Technologies Used
-
-Built With
 HTML5
 CSS3
-Twitter-Bootstrap - Framework
+Bootstrap
 JavaScript
-jQuery - JavaScript Library
-
-## Contributing
-
-If you have something interesting to contribute, send me a pull request!
+jQuery
 
 ## Liscence
 
-ItsLahRee | 2019
+MIT
 
