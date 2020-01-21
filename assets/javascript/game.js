@@ -1,5 +1,3 @@
-//PSEUDOCODE
-
 //global variables
 var randomNumber;
 var lost = 0;
@@ -8,40 +6,41 @@ var previous = 0;
 
 var resetAndStart = function() {
 
-  $(".crystals").empty();
+  $(".slices").empty();
 
 random_result = Math.floor(Math.random() * 69 + 30);  //hoisting
 
 //New Random number generates everytime we Win or Lose
-$("#result").html('Random Result: '+ random_result);
+$("#result").html('This Pug Wants'+ ' ' + random_result + ' ' + 'slices!');
 
-//A game with 4 crystals photos as buttions
-//Every crystal needs a random number between 1-12
+//A game with 4 pizza slices photos as buttions
+
 for (var i = 0; i < 4; i++) {
-
+  
+//Every slice needs a random number between 1-12
   var random = Math.floor(Math.random() * 11) + 1;
   console.log(random);
 
-  var crystal = $("<div>");
+  var slice = $("<div>");
   
-      crystal.attr ({
-        "class":'crystal',
+      slice.attr ({
+        "class":'slice',
         "data-random": random
       });
 
-    crystal.html(random);
+    slice.html(random);
 
-  $(".crystals").append(crystal);
+  $(".slices").append(slice);
     }
   };
 
   resetAndStart();
 
-//when clicking crystal it should add numbers up 
+//when clicking a slice it should add numbers up 
 //untill it meets or exceeds target number
 
 //Event delegation
-$(document).on('click', ".crystal", function () {
+$(document).on('click', ".slice", function () {
   
   var num= parseInt($(this).attr('data-random'));
 
